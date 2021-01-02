@@ -1,0 +1,46 @@
+---
+title: "r markdown presentation"
+author: "ma-haoran"
+date: "2021/1/2"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+## My new slide
+```{r,comment="",echo=TRUE}
+summary(cars)
+```
+
+
+***
+A slide without title
+```{r,eval=FALSE,echo=TRUE}
+summary(cars)
+```
+
+## My title
+*- Bullet1*
+
+**- Bullet1**
+
+1. Item1
+
+2. Item2
+
+`summary(cars)`
+
+### A top level subheading
+
+#### A sencond leve subheading
+
+
+## Slide with Plot
+
+```{r pressure,echo=FALSE,fig.align="center",fig.cap="my plot"}
+plot(pressure)
+```
+
