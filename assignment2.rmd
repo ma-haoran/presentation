@@ -1,0 +1,23 @@
+---
+title: "DDP Assignment 2"
+author: "ma-haoran"
+date: "2021/1/4"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Assignment Requirements
+Create a web page presentation using R Markdown that features a plot created with Plotly. Host your webpage on either GitHub Pages, RPubs, or NeoCities. Your webpage must contain the date that you created the document, and it must contain a plot created with Plotly. We would love to see you show off your creativity! 
+
+## plot
+```{r,message=FALSE,fig.align='center',warning=FALSE}
+library(ggplot2)
+library(plotly)
+g<-ggplot(data=mtcars,aes(x=cyl,y=mpg,color=wt))+
+    geom_smooth(method = "lm")+
+    geom_point()+facet_grid(mtcars$am)
+ggplotly(g)
+```
