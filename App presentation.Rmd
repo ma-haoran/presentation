@@ -1,0 +1,35 @@
+---
+title: "Developing Data Product Course Project"
+author: "ma-haoran"
+date: "2021/1/5"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Introduction
+
+This presentation is part of the Developing Data Products Coursera.org course project submission.
+
+It is an R Presentation generated with RStudio.
+
+## What is the purpose of the shiny APP?
+
+The "mtcars" data was extracted from the 1974 Motor Trend US magazine, and comprises fuel consumption and 10 aspects of automobile design and performance for 32 automobiles. 
+
+The application build a linear basing on the data, so one could predict mpg onece given cyl, disp and hp.
+
+## How the prediction works?
+
+The regression is a linear model with three variables:
+```{r,echo=TRUE,eval=FALSE}
+model <- lm(data=mtcars,mpg~as.factor(cyl)+disp+hp)
+```
+
+## Ready to give a try?
+
+Use the Shiny App at https://ma-haoran.shinyapps.io/mtcars/
+
+Look up the source code at https://github.com/ma-haoran/presentation/tree/main/regression.model
